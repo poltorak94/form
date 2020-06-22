@@ -16,6 +16,17 @@ input {
     font-family: 'Open Sans', sans-serif;
 }
 
+.container {
+    margin: 80px 0;
+}
+
+.checkox-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form {
     box-shadow: -12px 15px 17px rgba(0, 0, 0, 0.2);
     min-width: 500px;
@@ -30,11 +41,13 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 200ms ease all;
 }
 
 .form-body {
     background-color: #fff;
     padding: 20px;
+    transition: 200ms ease all;
 }
 
 .form-field {
@@ -111,7 +124,7 @@ input {
 }
 
 .form-registration {
-    margin: 80px 0;
+    margin: 0;
     display: flex;
     min-width: 900px;
     max-width: 900px;
@@ -137,6 +150,9 @@ input::placeholder {
     flex-direction: column;
     justify-content: center;
 }
+.column-first{
+    transition: 200ms ease all;
+}
 
 .form-logo {
     width: 100%;
@@ -146,4 +162,71 @@ input::placeholder {
     border-radius: 0;
     display: block;
     text-align: center;
+}
+
+.switcher-checkbox {
+    display: none;
+}
+
+.switcher-checkbox+.switcher {
+    display: block;
+    width: 90px;
+    height: 50px;
+    background-color: #bad5dc;
+    border-radius: 50px;
+    position: relative;
+    transition: 400ms ease;
+}
+
+.switcher-checkbox+.switcher>.switcher-span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #a5b4b9;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    transition: 400ms ease;
+}
+
+.switcher-checkbox:checked+.switcher {
+    background-color: #717477;
+}
+
+.switcher-checkbox:checked+.switcher>.switcher-span {
+    background-color: #333333;
+    left: 40px;
+}
+
+.form-dark .form-header {
+    background: #333333;
+}
+
+.form-dark .form-body {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-dark .form-button {
+    background: #717477;
+    border: 1px solid #fff;
+}
+
+.form-dark .form-button:hover {
+    background: #000000;
+    border-color: transparent;
+}
+
+.form-dark .form-link {
+    color: #ffffff;
+    opacity: 0.4;
+}
+
+.form-dark .form-link:hover {
+    opacity: 1;
+}
+.form-dark label{
+    color: #fff;
+}
+.form-dark .column-first{
+    background-color: #999ca0;
 }
